@@ -20,7 +20,7 @@ public class MovieController {
 	
 	@RequestMapping("/movie")
 	public String save(Movie movie){
-		System.out.println("Cadastrando o produto: " + movie);
+		
 		movieService.save(movie);
 		return "movie/ok";
 	}
