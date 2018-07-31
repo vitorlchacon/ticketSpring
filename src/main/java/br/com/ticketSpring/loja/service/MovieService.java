@@ -1,5 +1,6 @@
 package br.com.ticketSpring.loja.service;
 
+import java.util.List;
 import java.util.UUID;
 
 import javax.transaction.Transactional;
@@ -20,5 +21,10 @@ public class MovieService {
 	public void save(Movie movie){
 		movie.setId(UUID.randomUUID().toString());
 		movieDAO.save(movie);
+	}
+
+	public List<Movie> listAll() {
+		List<Movie> movies= movieDAO.listAll();
+		return movies;
 	}
 }
